@@ -1,3 +1,4 @@
+<html>
 <h2 id="practical-machine-learning-project-writeup">Practical Machine Learning Project Writeup</h2>
 
 <p><em>Krzysztof Koremba 20 Aug 2015</em></p>
@@ -47,10 +48,10 @@
 <li>there are many variables with missing data</li>
 <li>there are token variables  <br>
 <code>(i.e. skewness_yaw_dumbbell   : Factor w/ 2 levels "","#DIV/0!": 1 1 1 1 1 1 1 1 1 ...)</code></li>
-<li>there are variables with many empty string ìî values</li>
+<li>there are variables with many empty string ‚Äú‚Äù values</li>
 </ul>
 
-<p>My initial goal was to remove variables with more than 50% of missing data, but since there were only two leveles of NAís (0 and 98%) - then it was leaving only the completely filled variables:</p>
+<p>My initial goal was to remove variables with more than 50% of missing data, but since there were only two leveles of NA‚Äôs (0 and 98%) - then it was leaving only the completely filled variables:</p>
 
 <blockquote>
   <p><code>na_vect &lt;- sapply(trainSet, function(x) ifelse(is.na(x)|x %in% c("","#DIV/0!") ,1,0))</code></p>
@@ -66,7 +67,7 @@
   <p><code>trainSet &lt;- trainSet[,no_nas]</code></p>
 </blockquote>
 
-<p>I have also removed timestamps, username, X (row number) and a ìwindowî variables</p>
+<p>I have also removed timestamps, username, X (row number) and a ‚Äúwindow‚Äù variables</p>
 
 <blockquote>
   <p><code>$ X                   : int  1 2 3 4 5 6 7 8 9 10 ...</code></p>
@@ -152,7 +153,7 @@ P-Value [Acc &gt; NIR] : &lt; 2.2e-16
               Kappa : 1          
 </code></pre>
 
-<p>Mcnemarís Test P-Value : NA         </p>
+<p>Mcnemar‚Äôs Test P-Value : NA         </p>
 
 <p>Statistics by Class:</p>
 
@@ -190,7 +191,7 @@ P-Value [Acc &gt; NIR] : &lt; 2.2e-16
               Kappa : 0.9916          
 </code></pre>
 
-<p>Mcnemarís Test P-Value : NA              </p>
+<p>Mcnemar‚Äôs Test P-Value : NA              </p>
 
 <p>Statistics by Class:</p>
 
@@ -214,3 +215,4 @@ Balanced Accuracy      0.9984   0.9956   0.9919   0.9921   0.9993
 <blockquote>
   <p>[1] B A B A A E D B A A B C B A E E A B B B</p>
 </blockquote>
+</html>
