@@ -50,8 +50,6 @@ My initial goal was to remove variables with more than 50% of missing data, but 
 
 `na_stat <- sapply(na_vect, mean)`
 
-`na_stat[order(na_stat, decreasing = T)]`
-
 `no_nas <- na_stat == 0`
 
 `trainSet <- trainSet[,no_nas]`
